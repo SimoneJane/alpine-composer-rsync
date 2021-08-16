@@ -4,7 +4,7 @@ FROM php:alpine
 RUN apk update
 
 # Install packages.
-RUN apk add rsync openssh bash nodejs
+RUN apk add rsync openssh bash nodejs-current
 
 ## install Composer
 
@@ -16,4 +16,4 @@ RUN mv composer.phar /usr/local/bin/composer
 RUN chmod +x /usr/local/bin/composer
 
 ## Install npm dependencies.
-RUN npm install -g gulp bower
+RUN npm install -g gulp bower yarn
